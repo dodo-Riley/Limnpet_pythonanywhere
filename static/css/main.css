@@ -1,17 +1,17 @@
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
   font-family: "Roboto Slab", serif;
 }
 
-h3 {
-  font-family: "Pretendard-Thin";
-  color: #ffffff;
-  text-align: center;
-  font-style: italic;
-  font-weight: lighter;
-  margin-top: 50px;
-  font-size: 20px;
-}
+/*h3 {*/
+/*  font-family: "Pretendard-Thin";*/
+/*  color: #ffffff;*/
+/*  text-align: center;*/
+/*  font-style: italic;*/
+/*  font-weight: lighter;*/
+/*  margin-top: 50px;*/
+/*  font-size: 20px;*/
+/*}*/
 
 /* 상단바 */
 
@@ -37,12 +37,12 @@ h3 {
   font-style: italic;
   align-items: center;
   text-align: center;
-  padding-top: 80px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  bottom: 0;
+  height: 40px;
 }
 
 /* page 1 */
@@ -102,10 +102,6 @@ h3 {
 }
 
 /* page 5 */
-
-h1 {
-  text-align: center;
-}
 
 .lists {
   text-align: center;
