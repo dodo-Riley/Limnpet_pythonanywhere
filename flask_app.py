@@ -355,7 +355,7 @@ def test():
             return model
 
 
-        # cartoonGAN
+         # cartoonGAN
         if (style == "hayao") | (style == "paprika"):
             PRETRAINED_WEIGHT_DIR = '/home/sjh7397/test_pythonanywhere/model/cartoongan/pretrained_weights' # 저장된 pretrained 모델 가중치 파일 경로
             cartoonGAN_model = load_model(style)
