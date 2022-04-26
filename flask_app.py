@@ -53,6 +53,15 @@ def contact():
 def goods():
     return render_template('goods.html')
 
+# @app.route('/fileUpload', methods = ['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         f = request.files['file']
+#         # 저장할 경로 + 파일명
+#         filename = f.filename
+#         f.save('/home/sjh7397/test_pythonanywhere/static/input_img/'+filename)
+#         return render_template('index_1_1.html', img_file=f'input_img/{filename}' )
+
 @app.route('/hires', methods = ['GET', 'POST']) # 실제 프로젝트의 내용이 구현될 부분에 대한 경로 및 함수 정의
 def hires():
     if request.method == 'POST':
@@ -63,15 +72,6 @@ def hires():
         os.system(f'python inference_realesrgan.py -n RealESRGAN_x4plus_anime_6B -i /home/sjh7397/test_pythonanywhere/static/input_img/{f.filename}  -o /home/sjh7397/test_pythonanywhere/static/output_img')
 
         return render_template('result.html', img_file=f'output_img/{f.filename[:-4]}_out.png' )
-
-# @app.route('/fileUpload', methods = ['GET', 'POST'])
-# def upload_file():
-#     if request.method == 'POST':
-#         f = request.files['file']
-#         # 저장할 경로 + 파일명
-#         filename = f.filename
-#         f.save('/home/sjh7397/test_pythonanywhere/static/input_img/'+filename)
-#         return render_template('index_1_1.html', img_file=f'input_img/{filename}' )
 
 @app.route('/test', methods = ['GET', 'POST']) # 실제 프로젝트의 내용이 구현될 부분에 대한 경로 및 함수 정의
 def test():
