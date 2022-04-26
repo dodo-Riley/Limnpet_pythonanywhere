@@ -66,7 +66,7 @@ def hires():
         # 해상도 개선
         os.chdir('./model/Real-ESRGAN')
         os.system(f'python inference_realesrgan.py -n RealESRGAN_x4plus_anime_6B -i C:/Users/user/LimnPet/Limnpet_pythonanywhere/static/input_img/{f.filename}  -o C:/Users/user/LimnPet/Limnpet_pythonanywhere/static/output_img')
-
+        os.chdir('C:/Users/user/LimnPet/Limnpet_pythonanywhere')
         return render_template('result.html', img_file=f'output_img/{f.filename[:-4]}_out.png' )
 
 @app.route('/test', methods = ['GET', 'POST']) # 실제 프로젝트의 내용이 구현될 부분에 대한 경로 및 함수 정의
