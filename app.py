@@ -403,4 +403,4 @@ def test():
         return render_template('result.html', img_file=f'output_img/{style}_{date_string}.png' )
 
 if __name__ == '__main__':
-    app.run() # 파이썬 파일을 직접 실행할 경우 app.run 수행
+    app.run(host='0.0.0.0') # 파이썬 파일을 직접 실행할 경우 app.run 수행
