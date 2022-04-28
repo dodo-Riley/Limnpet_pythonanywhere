@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="google-site-verification"
+      content="0025mGEf2ZtX4gjWrrrs9xwChLlHo91qx0srZPNUsXw"
+    />
+    <meta
+      name="naver-site-verification"
+      content="0020cbb83cc0440060b4a81f8a1ad25474064596"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LimnPet 🐶</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename = 'favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename = 'favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/scroll.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/banner.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/slideshow.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/contact.css') }}"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <div class="list">
+      <div class="one">
+        <main class="slide_container">
+          <section class="slideshow">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="overlay">
+              <h1>
+                <p>Drawing your pet, LimnPet</p>
+                <button
+                  class="service_button"
+                  type="button"
+                  onClick="location.href='/service_zh-CN'"
+                >
+                  <span class="image-title">试试 Limnpet 服务</span>
+                </button>
+              </h1>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="container" role="main">
+      <div class="menu" id="header" role="menu">
+        <nav class="menu navbar navbar-expand-lg navbar-dark nav-distance">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/home_zh-CN"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about_zh-CN">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/service_zh-CN">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact_zh-CN">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/goods_zh-CN">Goods</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="/languages"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Languages
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <select
+                      name="lng"
+                      onchange="if(this.value) location.href = this.value;"
+                    >
+                      <option type="text">--select--</option>
+                      <option type="text" , value="/home_ko">한국어</option>
+                      <option type="text" , value="/home">English</option>
+                      <option type="text" , value="/home_ja">日本語</option>
+                      <option type="text" , value="/home_es">español</option>
+                      <option type="text" , value="/home_zh-CN">
+                        简体中文
+                      </option>
+                    </select>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="list">
+        <div class="two">
+          <section id="slideshow">
+            <div class="entire-content">
+              <div class="content-carrousel">
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/disney.jpg') }}"
+                  />
+                </figure>
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/hayao.jpg') }}"
+                  />
+                </figure>
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/shinkai.jpg') }}"
+                  />
+                </figure>
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/monet.jpg') }}"
+                  />
+                </figure>
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/ladyoscar.jpg') }}"
+                  />
+                </figure>
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/onepiece.jpg') }}"
+                  />
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <p style="font-size: 60px; font-weight: 600; color: aliceblue">
+            您好，我们是 LimnPet! 🐶
+          </p>
+          <p style="font-size: 20px; font-style: italic; color: aliceblue">
+            LimnPet 是一个造型服务，可以让你的宠物照片变成各种绘画风格
+          </p>
+
+          <div
+            class="intext"
+            style="
+              font-size: 28px;
+              font-weight: 500;
+              line-height: 3;
+              color: aliceblue;
+            "
+          >
+            您不再需要为宠物照片的样式付费。<br />
+            通过 <a href="/service_zh-CN">LimnPet</a>,
+            我们简化了购买宠物定制商品的复杂流程。<br />
+            从现在开始，您只需将您的宠物照片上传到
+            <a href="/service_zh-CN">LimnPet</a>
+            服务并保存您新样式的照片！<br />
+            如果您想购买风格化的宠物印花定制商品，请从菜单中选择商品。
+          </div>
+
+          <p style="font-size: 48px; font-weight: 600; color: aliceblue">
+            <br /><br /><u>考虑未来的计划</u>
+          </p>
+
+          <div class="futureplans">
+            <img
+              class="futureplans_img"
+              src="{{ url_for('static', filename = 'img/futureplans/collabo.jpg') }}"
+              alt=""
+            />
+            <p>
+              LimnPet的独家商品版<br />
+              <span style="color: #ff483b; font-weight: 800"
+                >via collaboration with artist, goods brand</span
+              >
+            </p>
+          </div>
+          <div class="futureplans">
+            <img
+              class="futureplans_img"
+              src="{{ url_for('static', filename = 'img/futureplans/option.jpg') }}"
+              alt=""
+            />
+            <p>
+              考虑加<br />
+              <span style="color: #ff483b; font-weight: 800">照片处理选项</span
+              ><br />
+            </p>
+          </div>
+          <div class="futureplans">
+            <img
+              class="futureplans_img"
+              src="{{ url_for('static', filename = 'img/futureplans/emoji.png') }}"
+              alt=""
+            />
+            <p>
+              将风格化的宠物照片变成您自己的照片<br />
+              <span style="color: #ff483b; font-weight: 800">emoji</span>
+            </p>
+          </div>
+          <div class="futureplans">
+            <img
+              class="futureplans_img"
+              src="{{ url_for('static', filename = 'img/futureplans/nft.jpg') }}"
+              alt=""
+            />
+            <p>
+              程式化的宠物照片成<br />
+              <span style="color: #ff483b; font-weight: 800">NFT</span><br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="three" style="padding-top: 15rem; color: aliceblue">
+          <p style="font-size: 48px; font-weight: 600">服务前后 🎨</p>
+
+          <div class="beforeafter">
+            <iframe
+              style="width: 100%; height: 100%"
+              frameborder="0"
+              class="juxtapose"
+              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6093a3be-c451-11ec-b5bb-6595d9b17862"
+            >
+            </iframe>
+          </div>
+          <p style="font-weight: 600; font-size: 30px">
+            <br />Move the navigation bar
+          </p>
+          <div id="service_button">
+            <button
+              class="remove-image"
+              type="button"
+              onClick="location.href='/service_zh-CN'"
+            >
+              <span class="image-title">移至 Limnpet 服务</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="four">
+          <div class="member">
+            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <p>Hanju Kim</p>
+            <p>E-mail : hanjukim0922@gmail.com</p>
+            <p>KakaoTalk : hj0922</p>
+          </div>
+          <div class="member">
+            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <p>Minji Kim</p>
+            <p>E-mail : vp9397@naver.com</p>
+            <p>KakaoTalk : woodbvo12</p>
+          </div>
+          <div class="member">
+            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <p>Yeonjae Sung</p>
+            <p>E-mail : siriyay@naver.com</p>
+            <p>KakaoTalk : proofreadd</p>
+          </div>
+          <div class="member">
+            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <p>Jongho Song</p>
+            <p>E-mail : sjh7397@naver.com</p>
+            <p>KakaoTalk : Lilac3</p>
+          </div>
+          <div class="member">
+            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <p>JeongYeong Hoon</p>
+            <p>E-mail : gi93008@naver.com</p>
+            <p>KakaoTalk : gannak8</p>
+          </div>
+          <div>
+            <a href="https://www.limnpet.ml" class="ct">Home</a>
+            <a href="" class="ct">Notion</a>
+            <a href="https://github.com/LiJell/Final-pjt" class="ct">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="five" style="padding-top: 15rem">
+          <h1 styl="text-align:center">🐶 Goods Shops 🐶</h1>
+          <div class="lists">
+            <img
+              class="list_img"
+              src="{{ url_for('static', filename = 'img/goods_clothes.jpg') }}"
+              alt=""
+            />
+            <p>服装</p>
+          </div>
+          <div class="lists">
+            <img
+              class="list_img"
+              src="{{ url_for('static', filename = 'img/goods_griptok.jpg') }}"
+              alt=""
+            />
+            <p>配件</p>
+          </div>
+          <div class="lists">
+            <img
+              class="list_img"
+              src="{{ url_for('static', filename = 'img/goods_cup.jpg') }}"
+              alt=""
+            />
+            <p>家庭用品</p>
+          </div>
+          <div class="lists">
+            <img
+              class="list_img"
+              src="{{ url_for('static', filename = 'img/goods_sticker.jpg') }}"
+              alt=""
+            />
+            <p>其他</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="six">
+          <h5 style="color: white">정보 입력?</h5>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

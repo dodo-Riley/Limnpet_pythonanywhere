@@ -32,6 +32,22 @@ app.use_reloader= False
 def home(): # 경로에 대한 요청이 있을 때 실행될 함수 정의
     return render_template('index.html') # 저장된 html 템플릿 렌더링
 
+@app.route('/home_ko') # 기본 홈 경로 설정
+def home_ko(): # 경로에 대한 요청이 있을 때 실행될 함수 정의
+    return render_template('index_ko.html') # 저장된 html 템플릿 렌더링
+
+@app.route('/home_es') # 기본 홈 경로 설정
+def home_es(): # 경로에 대한 요청이 있을 때 실행될 함수 정의
+    return render_template('index_es.html') # 저장된 html 템플릿 렌더링
+
+@app.route('/home_ja') # 기본 홈 경로 설정
+def home_ja(): # 경로에 대한 요청이 있을 때 실행될 함수 정의
+    return render_template('index_ja.html') # 저장된 html 템플릿 렌더링
+
+@app.route('/home_zh-CN') # 기본 홈 경로 설정
+def home_cn(): # 경로에 대한 요청이 있을 때 실행될 함수 정의
+    return render_template('index_zh-CN.html') # 저장된 html 템플릿 렌더링
+
 @app.route('/service')
 def service():
     return render_template('service.html')

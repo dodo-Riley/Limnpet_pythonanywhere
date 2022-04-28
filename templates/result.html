@@ -85,22 +85,16 @@
                   Languages
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <select name="lng">
-                    <option type="text" , value="ko">
-                      <a class="ko" href="/index_ko">한국어</a>
-                    </option>
-                    <option type="text" , value="en">
-                      <a class="en" href="/index">English</a>
-                    </option>
-                    <option type="text" , value="ja">
-                      <a class="ja" href="/index_ja">日本語</a>
-                    </option>
-                    <option type="text" , value="es">
-                      <a class="es" href="/index_es">español</a>
-                    </option>
-                    <option type="text" , value="zh-CN">
-                      <a class="zh-CN" href="/index_zh-CN">简体中文</a>
-                    </option>
+                  <select
+                    name="lng"
+                    onchange="if(this.value) location.href = this.value;"
+                  >
+                    <option type="text">--select--</option>
+                    <option type="text" , value="/home_ko">한국어</option>
+                    <option type="text" , value="/home">English</option>
+                    <option type="text" , value="/home_ja">日本語</option>
+                    <option type="text" , value="/home_es">español</option>
+                    <option type="text" , value="/home_zh-CN">简体中文</option>
                   </select>
                 </ul>
               </li>
@@ -117,6 +111,12 @@
           <h3 style="text-align: center">
             Draw your pet in the style of your choice
           </h3>
+          <p style="padding-top:1rem;text-align: center">
+            Save the result<br>
+            Back to the Service page to improve resolution<br>
+            or<br>
+            Move to the Goods page & Select a goods shop
+          </p>
         </div>
 
         <div class="file-upload">
@@ -146,6 +146,17 @@
             </button>
           </div>
 
+          <div id="goods_button">
+            <button
+              class="remove-image"
+              style="font-size:medium"
+              type="button"
+              onClick="location.href='/goods'"
+            >
+              <span class="image-title">Move to Goods shop list</span>
+            </button>
+          </div>
+          
           <div id="home_button">
             <button
               class="remove-image"

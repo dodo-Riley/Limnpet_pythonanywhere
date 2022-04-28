@@ -49,7 +49,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home"
+                <a class="nav-link active" aria-current="page" href="/home_ko"
                   >Home</a
                 >
               </li>
@@ -77,12 +77,16 @@
                   Languages
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <select name="lng">
-                    <option type="text" , value="ko"><a class="ko" href="/index_ko">한국어</a></option>
-                    <option type="text" , value="en"><a class="en" href="/index">English</a></option>
-                    <option type="text" , value="ja"><a class="ja" href="/index_ja">日本語</a></option>
-                    <option type="text" , value="es"><a class="es" href="/index_es">español</a></option>
-                    <option type="text" , value="zh-CN"><a class="zh-CN" href="/index_zh-CN">简体中文</a></option>
+                  <select
+                    name="lng"
+                    onchange="if(this.value) location.href = this.value;"
+                  >
+                    <option type="text">--select--</option>
+                    <option type="text" , value="/home_ko">한국어</option>
+                    <option type="text" , value="/home">English</option>
+                    <option type="text" , value="/home_ja">日本語</option>
+                    <option type="text" , value="/home_es">español</option>
+                    <option type="text" , value="/home_zh-CN">简体中文</option>
                   </select>
                 </ul>
               </li>
@@ -145,9 +149,9 @@
                   </div>
                 </div>
                 <div id="submit_button">
-                  <input class="remove-image" value="그림 그리기" type="submit" onClick="btn_click('draw');search();">
+                  <input class="remove-image" style="font-size: large;" value="Draw picture" type="submit" onClick="btn_click('draw');search();">
                   </input>
-                  <input class="remove-image" value="화질 올리기" type="submit" onClick="btn_click('hires');search();">
+                  <input class="remove-image" style="font-size: large;" value="Improve Resolution" type="submit" onClick="btn_click('hires');search();">
                   </input>
                   <!-- <button class="remove-image" type="submit" onClick="location.href='/test';search();">
                     <span class="image-title">그림 그리기</span>
