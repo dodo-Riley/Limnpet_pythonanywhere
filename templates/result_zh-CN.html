@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -57,10 +57,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="/home_zh-CN"
+                <a class="nav-link active" aria-current="page" href="/home_zh-CN"
                   >Home</a
                 >
               </li>
@@ -110,17 +107,23 @@
     <div class="list">
       <div class="three">
         <div style="text-align: center" id="div_show">
-          <h1 style="text-align: center">LimnPet</h1>
+          <h1 style="text-align: center">LimnPet 服务</h1>
           <h3 style="text-align: center">
-            Draw your pet in the style of your choice
+            以您选择的风格画出您的宠物
           </h3>
+          <p style="padding-top:1rem;text-align: center">
+            保存结果<br>
+            返回服务页面以提高分辨率<br>
+            或者<br>
+            移至商品页面并选择商品商店
+          </p>
         </div>
 
         <div class="file-upload">
           <div id="result_show">
             <img
               src="{{url_for('static', filename = img_file)}}"
-              style="width: 10rem"
+              style="width: 20rem"
               alt="Error"
             />
           </div>
@@ -140,6 +143,17 @@
               onClick="location.href='/service_zh-CN'"
             >
               <span class="image-title">再试一次</span>
+            </button>
+          </div>
+
+          <div id="goods_button">
+            <button
+              class="remove-image"
+              style="font-size:medium"
+              type="button"
+              onClick="location.href='/goods_zh-CN'"
+            >
+              <span class="image-title">移动到商品商店列表</span>
             </button>
           </div>
           

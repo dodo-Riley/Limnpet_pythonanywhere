@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -107,17 +107,23 @@
     <div class="list">
       <div class="three">
         <div style="text-align: center" id="div_show">
-          <h1 style="text-align: center">LimnPet</h1>
+          <h1 style="text-align: center">LimnPet Servicio</h1>
           <h3 style="text-align: center">
-            Draw your pet in the style of your choice
+            Dibuja a tu mascota con el estilo que prefieras
           </h3>
+          <p style="padding-top:1rem;text-align: center">
+            Guardar el resultado<br>
+            Volver a la página de Servicio para mejorar la resolución<br>
+            o<br>
+            Vaya a la página de Bienes y seleccione una tienda de bienes
+          </p>
         </div>
 
         <div class="file-upload">
           <div id="result_show">
             <img
               src="{{url_for('static', filename = img_file)}}"
-              style="width: 10rem"
+              style="width: 20rem"
               alt="Error"
             />
           </div>
@@ -140,13 +146,24 @@
             </button>
           </div>
 
+          <div id="goods_button">
+            <button
+              class="remove-image"
+              style="font-size:medium"
+              type="button"
+              onClick="location.href='/goods_es'"
+            >
+              <span class="image-title">Mover a la lista de compras de bienes</span>
+            </button>
+          </div>
+          
           <div id="home_button">
             <button
               class="remove-image"
               type="button"
               onClick="location.href='/home_es'"
             >
-              <span class="image-title">volver Inicio</span>
+              <span class="image-title">volver a casa</span>
             </button>
           </div>
 

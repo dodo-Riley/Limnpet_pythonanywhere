@@ -34,6 +34,10 @@
     <link rel="stylesheet" href="../static/css/scroll.css" />
     <link rel="stylesheet" href="../static/css/banner.css" />
     <link rel="stylesheet" href="../static/css/slideshow.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'css/goods.css') }}"
+    />
     <link rel="stylesheet" href="../static/css/contact.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
@@ -52,21 +56,33 @@
             <div class="slide"></div>
             <div class="slide"></div>
             <div class="overlay">
-              <h1>Drawing your pet, LimnPet</h1>
-              <div id="service_button">
+              <h1>
+                <p
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  "
+                >
+                  あなたのペットを描く, LimnPet
+                </p>
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
                 <button
-                  class="remove-image"
+                  class="button btn2"
                   type="button"
                   onClick="location.href='/service_ja'"
                 >
-                  <span class="image-title">LimnPetサービスに行く</span>
+                  <span>Limnpetサービスをお試しください</span>
                 </button>
-              </div>
+              </h1>
             </div>
           </section>
         </main>
       </div>
     </div>
+
     <div id="container" role="main">
       <div class="menu" id="header" role="menu">
         <nav class="menu navbar navbar-expand-lg navbar-dark nav-distance">
@@ -141,30 +157,27 @@
               <div class="content-carrousel">
                 <figure class="shadow">
                   <img
-                    src="https://images.mubicdn.net/images/cast_member/1419/cache-10-1535963981/image-w856.jpg?size=800x"
-                  />
-                </figure>
-                <figure class="shadow">
-                  <img src="https://wallpaperaccess.com/full/6608526.jpg" />
-                </figure>
-                <figure class="shadow">
-                  <img
-                    src="https://mblogthumb-phinf.pstatic.net/MjAxNzA3MThfMTkx/MDAxNTAwMzEyOTMzNzI2.Jr6gdX_6k6Ywkof6W3dc2J9oIpc6QQbnYSK0MZgCoJog.qZ7pfbkng1P0vDaDKb9Q0lTwFQm-RFpM65lBsxGSFKEg.JPEG.joonicarus/movie_image_%2811%29.jpg?type=w800"
+                    src="{{ url_for('static', filename = 'img/slideshow/hayao.jpg') }}"
                   />
                 </figure>
                 <figure class="shadow">
                   <img
-                    src="https://lumiere-a.akamaihd.net/v1/images/og_disney_4a3148aa.jpeg?region=0%2C0%2C1200%2C630"
+                    src="{{ url_for('static', filename = 'img/slideshow/shinkai.jpg') }}"
                   />
                 </figure>
                 <figure class="shadow">
                   <img
-                    src="http://cdn.bosa.co.kr/news/photo/202112/2163722_195185_3526.jpg"
+                    src="{{ url_for('static', filename = 'img/slideshow/monet.jpg') }}"
                   />
                 </figure>
                 <figure class="shadow">
                   <img
-                    src="http://itimg.chosun.com/sitedata/image/201910/26/2019102600772_0.jpg"
+                    src="{{ url_for('static', filename = 'img/slideshow/ladyoscar.jpg') }}"
+                  />
+                </figure>
+                <figure class="shadow">
+                  <img
+                    src="{{ url_for('static', filename = 'img/slideshow/onepiece.jpg') }}"
                   />
                 </figure>
               </div>
@@ -172,25 +185,34 @@
           </section>
 
           <p style="font-size: 60px; font-weight: 600; color: aliceblue">
-            Hello, We are LimnPet! 🐶
+            こんにちは、私たちはLimnPetです 🐶
           </p>
           <p style="font-size: 20px; font-style: italic; color: aliceblue">
-            LimnPetでペットの写真をさまざまな絵に変換してみてください！
+            LimnPetでペットの写真をさまざまな絵に変換してみてください!
           </p>
-
-          <div class="intext">
-            <h1 style="color: aliceblue">
-              What Is
-              <span
-                style="
-                  color: rgb(255, 94, 0);
-                  -webkit-text-stroke: 0.02rem black;
-                "
-                >LimnPet</span
-              >? 🐶
-            </h1>
+          <br /><br />
+          <h1 style="font-weight: bold; color: aliceblue">
+            What Is
             <span
               style="color: rgb(255, 94, 0); -webkit-text-stroke: 0.02rem black"
+              >LimnPet</span
+            >? 🐶
+          </h1>
+          <div
+            class="intext"
+            style="
+              font-size: 28px;
+              font-weight: 400;
+              line-height: 3;
+              color: rgba(255, 255, 255, 0.733);
+            "
+          >
+            <span
+              style="
+                color: rgb(255, 94, 0);
+                -webkit-text-stroke: 0.02rem black;
+                padding-top: 2rem;
+              "
               >LimnPet</span
             >はペットの写真をさまざまなスタイルの絵の写真に変換するサービスです。
             <br />
@@ -199,7 +221,7 @@
             <span
               style="color: rgb(255, 94, 0); -webkit-text-stroke: 0.02rem black"
               >LimnPet</span
-            >の<a href="/service_ja">サービス</a
+            >の<a href="/about_ja">サービス</a
             >に写真を置き、変換された写真を保存するだけです。
             <br />
             <span
@@ -210,22 +232,21 @@
             >に適用します。<br />
             ペットの写真が入ったカスタムグッズを購入したい場合は、メニューから<a
               href="/goods_ja"
-              >Goods</a
+              >品</a
             >アイテムを選択してください。
           </div>
-
-          <p style="font-size: 40px; font-weight: 600; color: aliceblue">
-            <br /><br /><u>Future Plans</u>
+          <p style="font-size: 48px; font-weight: 500; color: aliceblue">
+            <br /><br /><u>今後の計画</u>
           </p>
 
           <div class="futureplans">
             <img
               class="futureplans_img"
-              src="{{ url_for('static', filename = 'img/futureplans_collabo.jpg') }}"
+              src="{{ url_for('static', filename = 'img/futureplans/collabo.jpg') }}"
               alt=""
             />
             <p>
-              LimnPetのグッズエディション！<br />
+              LimnPetのグッズエディション<br />
               <span style="color: #ff483b; font-weight: 800"
                 >様々なアーティスト、ブランド、コラボレーション</span
               >
@@ -234,7 +255,7 @@
           <div class="futureplans">
             <img
               class="futureplans_img"
-              src="{{ url_for('static', filename = 'img/futureplans_opt.jpg') }}"
+              src="{{ url_for('static', filename = 'img/futureplans/option.jpg') }}"
               alt=""
             />
             <p>
@@ -247,18 +268,18 @@
           <div class="futureplans">
             <img
               class="futureplans_img"
-              src="{{ url_for('static', filename = 'img/futureplans_emoji.png') }}"
+              src="{{ url_for('static', filename = 'img/futureplans/emoji.png') }}"
               alt=""
             />
             <p>
-              自分のペット犬の
+              自分のペット犬の<br />
               <span style="color: #ff483b; font-weight: 800">絵文字</span>を作る
             </p>
           </div>
           <div class="futureplans">
             <img
               class="futureplans_img"
-              src="{{ url_for('static', filename = 'img/futureplans_nft.jpg') }}"
+              src="{{ url_for('static', filename = 'img/futureplans/nft.jpg') }}"
               alt=""
             />
             <p>
@@ -270,10 +291,8 @@
       </div>
 
       <div class="list">
-        <div class="three">
-          <p style="font-size: 48px; font-weight: 600; color: aliceblue">
-            Service Before & After 🎨
-          </p>
+        <div class="three" style="padding-top: 15rem; color: aliceblue">
+          <p style="font-size: 48px; font-weight: 600">サービスの前後 🎨</p>
           <div class="beforeafter">
             <iframe
               style="width: 100%; height: 100%"
@@ -298,89 +317,419 @@
       </div>
 
       <div class="list">
-        <div class="four">
+        <div class="four" style="padding-top: 15rem">
+          <h1
+            style="
+              text-align: center;
+              font-size: 48px;
+              font-weight: 600;
+              color: aliceblue;
+            "
+          >
+            グッズショップ 🎁
+          </h1>
+          <div style="padding-top: 2rem; padding-bottom: 2rem">
+            <h4>
+              <p style="color: white">
+                Limpetを介して変換された画像でカスタマイズされたペットグッズを作ろう！
+              </p>
+              <p style="color: white">
+                新しく定型化された画像を製品として使用したい場合は、
+                下の画像をクリックしてください。
+              </p>
+              <p style="color: red">
+                商品のウェブサイトは現在韓国でのみ利用可能です。
+              </p>
+            </h4>
+          </div>
+          <div class="lists">
+            <div class="list1">
+              <div
+                style="
+                  background-image: url('../../static/img/cloth_modified.jpg');
+                "
+                class="img"
+              >
+                <a
+                  href="https://www.bizhows.com/v/category?mock=product_list_007&categoryName=%ED%8B%B0%EC%85%94%EC%B8%A0"
+                  class="ac1"
+                  target="blank"
+                >
+                  <div class="imc1"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cloth_origin.jpg');
+                    "
+                    class="dis1"
+                  >
+                    Bizhows
+                  </div>
+                </a>
+                <a
+                  href="https://www.publog.co.kr/apparel/"
+                  class="ac2"
+                  target="blank"
+                >
+                  <div class="imc2"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cloth_origin.jpg');
+                    "
+                    class="dis2"
+                  >
+                    Publog
+                  </div>
+                </a>
+                <a href="https://www.tpana.com/" class="ac3" target="blank">
+                  <div class="imc3"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cloth_origin.jpg');
+                    "
+                    class="dis3"
+                  >
+                    Tpana
+                  </div>
+                </a>
+                <a
+                  href="https://www.customzone.co.kr/"
+                  class="ac4"
+                  target="blank"
+                >
+                  <div class="imc4"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cloth_origin.jpg');
+                    "
+                    class="dis4"
+                  >
+                    Customzone
+                  </div>
+                </a>
+              </div>
+            </div>
+            <p class="tes">衣類</p>
+          </div>
+          <div class="lists">
+            <div class="list2">
+              <div
+                style="
+                  background-image: url('../../static/img/griptok_modified.jpg');
+                "
+                class="img"
+              >
+                <a
+                  href="http://www.bandya.com/product/list.html?cate_no=152"
+                  class="ac1"
+                  target="blank"
+                >
+                  <div class="imc1"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/griptok_origin.jpg');
+                    "
+                    class="dis1"
+                  >
+                    Bandya
+                  </div>
+                </a>
+                <a
+                  href="https://www.marpple.com/kr/cases"
+                  class="ac2"
+                  target="blank"
+                >
+                  <div class="imc2"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/griptok_origin.jpg');
+                    "
+                    class="dis2"
+                  >
+                    MARPPLE
+                  </div>
+                </a>
+                <a
+                  href="https://www.phoneppu.com/product/custom_list.html?cate_no=3275"
+                  class="ac3"
+                  target="blank"
+                >
+                  <div class="imc3"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/griptok_origin.jpg');
+                    "
+                    class="dis3"
+                  >
+                    Phoneppu
+                  </div>
+                </a>
+                <a href="https://shapely.co.kr/" class="ac4" target="blank">
+                  <div class="imc4"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/griptok_origin.jpg');
+                    "
+                    class="dis4"
+                  >
+                    Shapely
+                  </div>
+                </a>
+              </div>
+            </div>
+            <p class="tes">電話-アクセサリー<</p>
+          </div>
+          <div class="lists">
+            <div class="list3">
+              <div
+                style="
+                  background-image: url('../../static/img/cup_modified.jpg');
+                "
+                class="img"
+              >
+                <a href="http://www.handmc.com/" class="ac1" target="blank">
+                  <div class="imc1"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cup_origin.jpg');
+                    "
+                    class="dis1"
+                  >
+                    Handmadec
+                  </div>
+                </a>
+                <a href="http://www.jjomool.com/" class="ac2" target="blank">
+                  <div class="imc2"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cup_origin.jpg');
+                    "
+                    class="dis2"
+                  >
+                    Jjomoolshop
+                  </div>
+                </a>
+                <a
+                  href="https://www.tobuymall.com/goods/goods_list.php?cateCd=025002"
+                  class="ac3"
+                  target="blank"
+                >
+                  <div class="imc3"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cup_origin.jpg');
+                    "
+                    class="dis3"
+                  >
+                    TBL
+                  </div>
+                </a>
+                <a
+                  href="http://www.thankshop.co.kr/shopuser/goods/productList.html?largeno=92&kind=normal"
+                  class="ac4"
+                  target="blank"
+                >
+                  <div class="imc4"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/cup_origin.jpg');
+                    "
+                    class="dis4"
+                  >
+                    Thankshop
+                  </div>
+                </a>
+              </div>
+            </div>
+            <p class="tes">生活用品</p>
+          </div>
+          <div class="lists">
+            <div class="list4">
+              <div
+                style="
+                  background-image: url('../../static/img/sticker_modified.jpg');
+                "
+                class="img"
+              >
+                <a href="https://www.smilecat.com/" class="ac1" target="blank">
+                  <div class="imc1"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/sticker_origin.jpg');
+                    "
+                    class="dis1"
+                  >
+                    Smilecat
+                  </div>
+                </a>
+                <a href="http://www.adsland.com/" class="ac2" target="blank">
+                  <div class="imc2"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/sticker_origin.jpg');
+                    "
+                    class="dis2"
+                  >
+                    Adsland
+                  </div>
+                </a>
+                <a
+                  href="https://www.snaps.com/store/calendar/overview?g_media=google&g_keyword=%EB%8B%AC%EB%A0%A5%EC%A3%BC%EB%AC%B8%EC%A0%9C%EC%9E%91&gclid=Cj0KCQjw37iTBhCWARIsACBt1IzYqwP6nrQ9phP3ijLab9ZUS_XVVxpXajcShzw3rKgPN3-i7cy8jSwaAkElEALw_wcB"
+                  class="ac3"
+                  target="blank"
+                >
+                  <div class="imc3"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/sticker_origin.jpg');
+                    "
+                    class="dis3"
+                  >
+                    Snaps
+                  </div>
+                </a>
+                <a
+                  href="http://www.huniprinting.com/"
+                  class="ac4"
+                  target="blank"
+                >
+                  <div class="imc4"></div>
+                  <div
+                    style="
+                      background-image: url('../../static/img/sticker_origin.jpg');
+                    "
+                    class="dis4"
+                  >
+                    huniprinting
+                  </div>
+                </a>
+              </div>
+            </div>
+            <p class="tes">その他</p>
+          </div>
+        </div>
+      </div>
+      <div class="list">
+        <div class="five" style="padding-top: 15rem">
+          <div>
+            <h1
+              style="
+                text-align: center;
+                font-size: 48px;
+                font-weight: 600;
+                color: aliceblue;
+                padding-bottom: 5rem;
+              "
+            >
+              コンタクト 📧
+            </h1>
+          </div>
           <div class="member">
-            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <img
+              src="{{ url_for('static', filename = 'img/contact/khj.png') }}"
+            />
             <p>Hanju Kim</p>
             <p>E-mail : hanjukim0922@gmail.com</p>
             <p>KakaoTalk : hj0922</p>
           </div>
           <div class="member">
-            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <img
+              src="{{ url_for('static', filename = 'img/contact/kmj.png') }}"
+            />
             <p>Minji Kim</p>
             <p>E-mail : vp9397@naver.com</p>
             <p>KakaoTalk : woodbvo12</p>
           </div>
           <div class="member">
-            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <img
+              src="{{ url_for('static', filename = 'img/contact/syj.png') }}"
+            />
             <p>Yeonjae Sung</p>
             <p>E-mail : siriyay@naver.com</p>
             <p>KakaoTalk : proofreadd</p>
           </div>
           <div class="member">
-            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <img
+              src="{{ url_for('static', filename = 'img/contact/sjh.png') }}"
+            />
             <p>Jongho Song</p>
             <p>E-mail : sjh7397@naver.com</p>
             <p>KakaoTalk : Lilac3</p>
           </div>
           <div class="member">
-            <img src="{{ url_for('static', filename = 'img/bg.jpg') }}" />
+            <img
+              src="{{ url_for('static', filename = 'img/contact/jyh.png') }}"
+            />
             <p>JeongYeong Hoon</p>
             <p>E-mail : gi93008@naver.com</p>
             <p>KakaoTalk : gannak8</p>
           </div>
           <div>
             <a href="https://www.limnpet.ml" class="ct">Home</a>
-            <a href="" class="ct">Notion</a>
+            <a
+              href="http://limnpet.notion.site/LimnPet-537f6461d3234937ab94dee11671d22a"
+              class="ct"
+              >Notion</a
+            >
             <a href="https://github.com/LiJell/Final-pjt" class="ct">Github</a>
           </div>
         </div>
       </div>
 
       <div class="list">
-        <div class="five">
-          <h1 styl="text-align:center">🐶 Goods Shops 🐶</h1>
-          <div class="lists">
-            <img
-              class="list_img"
-              src="{{ url_for('static', filename = 'img/goods_clothes.jpg') }}"
-              alt=""
-            />
-            <p>衣類</p>
-          </div>
-          <div class="lists">
-            <img
-              class="list_img"
-              src="{{ url_for('static', filename = 'img/goods_griptok.jpg') }}"
-              alt=""
-            />
-            <p>携帯電話アクセサリー</p>
-          </div>
-          <div class="lists">
-            <img
-              class="list_img"
-              src="{{ url_for('static', filename = 'img/goods_cup.jpg') }}"
-              alt=""
-            />
-            <p>生活用品</p>
-          </div>
-          <div class="lists">
-            <img
-              class="list_img"
-              src="{{ url_for('static', filename = 'img/goods_sticker.jpg') }}"
-              alt=""
-            />
-            <p>その他</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="list">
         <div class="six">
-          <h5 style="color: white">정보 입력?</h5>
+          <div class="footer-info">
+            <p class="footer-info__name">
+              <img src="{{ url_for('static', filename = 'img/footer.png') }}" />
+            </p>
+            <p class="footer-info__text">
+              <span>림펫 LIMNPET</span>
+              |
+              <span>
+                <em>ソース</em>
+                <a
+                  href="/img_src"
+                  target="_blank"
+                  style="text-decoration: none; color: white"
+                >
+                  使用イメージソース</a
+                >
+              </span>
+              |
+              <span>
+                <em>made by</em>
+                LIMNPET TEAM
+              </span>
+              |
+              <span>
+                <em>team_email</em>
+                allislijell@gmail.com
+              </span>
+              <br />
+              <br />
+              Copyright Policy
+              <br />
+              このサービスは教育目的でのみ制限されています。<br />著作権のすべての権利は、私たちが提供する各アーティストに留保されています。
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    >
+      let test = document.getElementById("example");
+
+      test.addEventListener("mouseover", function (event) {
+      //highlight the mouseover target
+      event.target.style.color = "red";
+      }, false);
+
+      test.addEventListener("mouseout", function (event) {
+      // highlight the mouseout target
+      event.target.style.color = "black";
+      }, false);
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
